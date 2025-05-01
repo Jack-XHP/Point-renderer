@@ -62,6 +62,17 @@ def get_extensions():
 
 
 if __name__ == '__main__':
+
+    requirements = [
+        "transforms3d",
+        "jupyter",
+        "numpy",
+        "torch",
+        "matplotlib",
+        "imageio",
+        "trimesh",
+        "meshcat",
+    ]
     setup(
         # Metadata
         name=PACKAGE_NAME,
@@ -71,7 +82,7 @@ if __name__ == '__main__':
         url=URL,
         license=LICENSE,
         python_requires='>=3.7',
-
+        install_requires=requirements,
         # Package info
         packages=['point_renderer'],
         include_package_data=True,
